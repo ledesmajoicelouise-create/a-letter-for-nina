@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A Little Something for Ate Nina</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <main class="game">
+
+    <div class="top-label">✿ A SPECIAL DELIVERY ✿</div>
+
+    <section id="intro">
+      <div class="pixel-sun">☀</div>
+      <p class="small-title">WELCOME TO THE VALLEY</p>
+      <h1>A little something<br>for Ate Nina</h1>
+
+      <div class="landscape">
+        <div class="cloud cloud-one"></div>
+        <div class="cloud cloud-two"></div>
+        <div class="pixel-tree">🌳</div>
+        <div class="intro-house">🏡</div>
+        <div class="pixel-tree tree-two">🌲</div>
+        <div class="grass">✿ ✿ ✿ ✿ ✿</div>
+      </div>
+
+      <div class="dialogue">
+        <p class="speaker">VILLAGE NOTICE</p>
+        <p>
+          A special letter has arrived in the valley!
+          Unfortunately, its sender seems to be hiding.
+        </p>
+        <p>
+          There are four houses in this village.
+          Somewhere inside one of them is Jayjay,
+          waiting to give you something.
+        </p>
+        <p>Will you help deliver this letter?</p>
+      </div>
+
+      <button onclick="startGame()">BEGIN ADVENTURE ▶</button>
+    </section>
+
+    <section id="village" class="hidden">
+      <p class="small-title">DAY 01 · THE VALLEY</p>
+      <h2>Pelican Village</h2>
+      <p class="subtitle">Find the house where Jayjay lives!</p>
+
+      <div class="village-scene">
+        <div class="sky-decoration">☀ ☁ ☁</div>
+        <div class="map-grid">
+
+          <button class="house" onclick="visitHouse(1)">
+            <span class="roof"></span>
+            <span class="house-body">
+              <span class="window"></span>
+              <span class="door"></span>
+            </span>
+            <span class="house-name">HOUSE 01</span>
+          </button>
+
+          <button class="house" onclick="visitHouse(2)">
+            <span class="roof roof-blue"></span>
+            <span class="house-body">
+              <span class="window"></span>
+              <span class="door"></span>
+            </span>
+            <span class="house-name">HOUSE 02</span>
+          </button>
+
+          <button class="house" onclick="visitHouse(3)">
+            <span class="roof roof-red"></span>
+            <span class="house-body">
+              <span class="window"></span>
+              <span class="door"></span>
+            </span>
+            <span class="house-name">HOUSE 03</span>
+          </button>
+
+          <button class="house" onclick="visitHouse(4)">
+            <span class="roof roof-purple"></span>
+            <span class="house-body">
+              <span class="window"></span>
+              <span class="door"></span>
+            </span>
+            <span class="house-name">HOUSE 04</span>
+          </button>
+
+        </div>
+        <div class="map-grass">✿ ✿ ♧ ✿ ✿ ♧ ✿</div>
+      </div>
+
+      <div class="dialogue" id="message">
+        <p class="speaker">NINA</p>
+        <p>Hmm... which house should I visit first?</p>
+      </div>
+
+      <p class="counter" id="counter">HOUSES VISITED: 0 / 4</p>
+    </section>
+
+    <section id="found" class="hidden">
+      <div class="found-icon">✉</div>
+      <p class="small-title">QUEST COMPLETE!</p>
+      <h2>You found Jayjay!</h2>
+
+      <div class="dialogue">
+        <p class="speaker">JAYJAY</p>
+        <p>
+          Ate Nina! There you are.
+          I've been waiting for you!
+        </p>
+        <p>
+          I have something I've been wanting
+          to tell you for a while.
+        </p>
+      </div>
+
+      <div class="envelope">💌</div>
+      <button onclick="openLetter()">OPEN YOUR LETTER ♡</button>
+    </section>
+
+    <section id="letter" class="hidden">
+      <p class="small-title">A MESSAGE FROM JAYJAY</p>
+      <div class="letter-paper">
+        <div class="letter-flowers">✿ ❀ ✿ ❀ ✿</div>
+
+        <h2>Dear Ate Nina,</h2>
+
+        <p>
+          Words honestly cannot explain how proud I am of you, Ate.
+          I'm so happy seeing all the wonderful things happening
+          in your life and getting to witness your recent achievements.
+          You deserve every bit of happiness and success coming your way,
+          and I hope you never forget to give yourself credit for
+          everything you've accomplished. I'm genuinely happy that I
+          get to be your junior and, more importantly, one of the
+          people you cherish.
+        </p>
+
+        <p>
+          Life may not always be easy, Ate, but I hope you never lose
+          sight of the light at the end of the tunnel, even when it
+          takes a little longer to reach. Please remember that you
+          don't have to have everything figured out all the time.
+          Take things at your own pace and never be too hard on yourself.
+          I believe in you and in all the wonderful things you're
+          still bound to accomplish.
+        </p>
+
+        <p>
+          Thank you for being part of my first year in SPC and for
+          allowing me to share a little part of my life with you.
+          You are the senior who helped me the most during my hard times,
+          even when I was stubborn and difficult to talk to. I cherish
+          every single one of our little conversations because you
+          always make me so happy. Even something like our duty last
+          Saturday might have seemed like a small thing, but for me,
+          it was my biggest opportunity, and I was so glad I got to
+          work alongside you and my other seniors. I'm so happy that
+          our paths crossed, and I hope I get to witness more of your
+          milestones, hear more of your stories, and celebrate more
+          achievements with you. Having you as one of my seniors is
+          something I'll always be grateful for.
+        </p>
+
+        <p>
+          Thinking about your graduation honestly sucks because I know
+          I won't get to see you guys as often anymore. I'll miss having
+          you around campus, our little interactions, and simply knowing
+          that you're just a hallway away. I'm excited for your next
+          chapter, but I wish we could keep these moments a little longer.
+          I hope graduation won't be the end of our bond, and that we'll
+          continue to share parts of our lives even when things get busier.
+        </p>
+
+        <p>
+          I wish you all the happiness, success, good health, and
+          opportunities your heart desires. Thank you for being someone
+          I can look up to, Ate. Please know that I, Jayjay, will always
+          be here for you too. I'm so proud of you, and I'm even prouder
+          to say that I got to be your junior. I'll always be cheering
+          for you. Take care always!
+        </p>
+
+        <div class="letter-flowers">✿ ❀ ✿ ❀ ✿</div>
+        <p class="signature">With love,<br>Jayjay ♡</p>
+      </div>
+
+      <button onclick="finishGame()">FINISH JOURNEY ♡</button>
+    </section>
+
+    <section id="ending" class="hidden">
+      <div class="ending-icon">🌷</div>
+      <h2>Thank you, Ate Nina!</h2>
+      <div class="dialogue">
+        <p>
+          No matter where your next adventure takes you,
+          I hope you know that someone from this little
+          village will always be cheering you on.
+        </p>
+        <p>Until our next adventure, Ate!</p>
+      </div>
+      <p class="signature">— Jayjay ♡</p>
+    </section>
+
+    <footer>
+      <button class="music-button" id="musicButton" onclick="toggleMusic()">
+        ♪ MUSIC: OFF
+      </button>
+      <p>MADE WITH ♡ BY JAYJAY</p>
+    </footer>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
